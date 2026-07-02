@@ -20,3 +20,25 @@ html {
 .label {
   @apply text-[11px] font-semibold uppercase tracking-[0.14em];
 }
+
+/* Print: only the executive brief on the tool pages renders */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #brief-doc,
+  #brief-doc * {
+    visibility: visible;
+  }
+  #brief-doc {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    padding: 0.5in;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

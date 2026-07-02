@@ -1,3 +1,18 @@
+import Link from "next/link";
+
+const TOOLS = [
+  {
+    href: "/tools/saas-spend",
+    name: "SaaS Spend Model",
+    desc: "Prices shelfware, redundant tooling, and renewal leakage from two inputs, then writes CFO, CIO, and Procurement briefs."
+  },
+  {
+    href: "/tools/sales-productivity",
+    name: "Sales Productivity Model",
+    desc: "Prices what rep turnover, empty seats, and ramp time cost a revenue plan, with briefs for the CRO, CFO, and RevOps."
+  }
+];
+
 const STATS = [
   { value: "$1M+", label: "Annual Quota" },
   { value: "18-Month", label: "Enterprise Cycles Closed" },
@@ -85,6 +100,7 @@ const EXPERIENCE = [
 
 const NAV = [
   { href: "#what-i-do", label: "What I Do" },
+  { href: "#tools", label: "Tools" },
   { href: "#wins", label: "Wins" },
   { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" }
@@ -232,8 +248,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TOOLS / PROOF OF WORK */}
+      <section id="tools" className="border-y border-line bg-tint">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <p className="label text-blue">Tools</p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight">
+            Proof of Work
+          </h2>
+          <p className="mt-3 max-w-2xl text-lg leading-relaxed text-slate">
+            Interactive ROI models I designed and built. The same
+            value-engineering I bring to enterprise deals.
+          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {TOOLS.map((t) => (
+              <Link
+                key={t.href}
+                href={t.href}
+                className="group rounded-lg border border-line bg-white p-7 hover:border-blue"
+              >
+                <h3 className="text-lg font-bold group-hover:text-blue">
+                  {t.name}
+                </h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-slate">
+                  {t.desc}
+                </p>
+                <p className="mt-5 text-sm font-semibold text-blue">
+                  Open the live model &rarr;
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SIGNATURE WINS */}
-      <section id="wins" className="border-y border-line bg-tint">
+      <section id="wins">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <p className="label text-blue">Signature Wins</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight">
