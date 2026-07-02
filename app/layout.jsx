@@ -1,31 +1,34 @@
 import "./globals.css";
-import { Newsreader, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  variable: "--font-newsreader"
-});
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-plex-mono"
-});
+
+const description =
+  "I build pipeline from zero, close complex enterprise deals, and translate business value into numbers a CFO will sign. San Diego, CA.";
 
 export const metadata = {
-  title: "Aaron Cannata — Value Engineering & Business Case Consulting",
-  description:
-    "I build the financial models, ROI calculators, and executive briefs that turn complex workforce decisions into board-ready business cases."
+  metadataBase: new URL("https://aaroncannata.com"),
+  title: "Aaron Cannata | Enterprise Account Executive",
+  description,
+  openGraph: {
+    title: "Aaron Cannata | Enterprise Account Executive",
+    description,
+    url: "https://aaroncannata.com",
+    siteName: "Aaron Cannata",
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary",
+    title: "Aaron Cannata | Enterprise Account Executive",
+    description
+  }
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${newsreader.variable} ${inter.variable} ${plexMono.variable}`}
-    >
-      <body className="bg-paper text-ink font-sans antialiased">{children}</body>
+    <html lang="en" className={inter.variable}>
+      <body className="bg-white text-navy font-sans antialiased">{children}</body>
     </html>
   );
 }

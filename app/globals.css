@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 ::selection {
-  background: #1e7a4d;
-  color: #fbfaf8;
+  background: #1d4ed8;
+  color: #ffffff;
 }
 
 html {
@@ -14,49 +14,9 @@ html {
   html {
     scroll-behavior: auto;
   }
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
 }
 
-.eyebrow {
-  @apply font-mono text-[11px] tracking-[0.18em] uppercase text-green;
-}
-
-.hairline-top {
-  @apply border-t border-hairline;
-}
-
-/* Editable numbers in the hero sentence */
-.hero-input {
-  @apply font-mono text-green bg-transparent border-b-2 border-green/40 focus:border-green outline-none text-center;
-  font-size: inherit;
-  font-style: normal;
-}
-
-input[type="range"] {
-  @apply accent-green;
-}
-
-/* ——— Print: only the brief renders ——— */
-@media print {
-  body * {
-    visibility: hidden;
-  }
-  #brief-doc,
-  #brief-doc * {
-    visibility: visible;
-  }
-  #brief-doc {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    padding: 0.5in;
-    border: none !important;
-    box-shadow: none !important;
-  }
-  .no-print {
-    display: none !important;
-  }
+/* Small all-caps label used under stat callouts and section eyebrows */
+.label {
+  @apply text-[11px] font-semibold uppercase tracking-[0.14em];
 }

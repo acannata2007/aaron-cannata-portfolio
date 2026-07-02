@@ -4,17 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        paper: "#FBFAF8",
-        ink: "#13203A",
-        green: "#1E7A4D",
-        slate: "#55606E",
-        hairline: "#E5E2DB",
-        tint: "#F2F1EC"
+        navy: "#0B1F3A",
+        blue: "#1D4ED8",
+        slate: "#475569",
+        line: "#E2E8F0",
+        tint: "#F8FAFC"
       },
       fontFamily: {
-        serif: ["var(--font-newsreader)", "Georgia", "serif"],
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        mono: ["var(--font-plex-mono)", "ui-monospace", "monospace"]
+        sans: ["var(--font-inter)", "system-ui", "-apple-system", "sans-serif"]
       }
     }
   },
