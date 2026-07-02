@@ -5,19 +5,31 @@ const TOOLS = [
   {
     href: "/tools/workforce-roi",
     name: "Workforce ROI Calculator",
-    desc: "Models the full cost of care-driven absenteeism and attrition against benchmarked industry data, nets out the federal §45F credit, and generates a stakeholder-specific executive brief on demand.",
+    desc: "The full cost of care-driven absenteeism and attrition, net of the federal \u00a745F credit \u2014 with executive briefs for Finance, Operations, and HR.",
+    status: "LIVE"
+  },
+  {
+    href: "/tools/sales-productivity",
+    name: "Sales Productivity Model",
+    desc: "What rep turnover, empty seats, and ramp time cost a revenue plan \u2014 with briefs written for the CRO, the CFO, and RevOps.",
+    status: "LIVE"
+  },
+  {
+    href: "/tools/saas-spend",
+    name: "SaaS Spend Model",
+    desc: "Shelfware, redundant tooling, and renewal leakage, sized from two inputs \u2014 with briefs for the CFO, the CIO, and Procurement.",
     status: "LIVE"
   },
   {
     href: "#contact",
     name: "Tax Credit Stacking Tool",
-    desc: "Multi-jurisdictional model stacking federal §45F with state-level employer childcare credits to drive net program cost toward zero.",
+    desc: "Multi-jurisdictional model stacking federal \u00a745F with state-level employer credits to drive net program cost toward zero.",
     status: "IN BUILD"
   },
   {
     href: "#contact",
     name: "Cost-of-Vacancy Calculator",
-    desc: "Quantifies what every open requisition costs per day in lost output, overtime backfill, and team drag — by role and industry.",
+    desc: "What every open requisition costs per day in lost output, overtime backfill, and team drag \u2014 by role and industry.",
     status: "IN BUILD"
   }
 ];
@@ -59,20 +71,7 @@ export default function Home() {
       <section className="px-6 sm:px-12 max-w-6xl mx-auto pt-16 pb-24">
         <p className="eyebrow mb-8">Value engineering · Business cases · ROI instrumentation</p>
         <HeroModel />
-        <div className="mt-12 flex flex-wrap gap-4">
-          <Link
-            href="/tools/workforce-roi"
-            className="bg-ink text-paper font-mono text-[13px] tracking-wider uppercase px-6 py-3 hover:bg-green transition-colors"
-          >
-            Run the full model →
-          </Link>
-          <a
-            href="#contact"
-            className="border border-ink font-mono text-[13px] tracking-wider uppercase px-6 py-3 hover:border-green hover:text-green transition-colors"
-          >
-            Work with me
-          </a>
-        </div>
+        
       </section>
 
       {/* TOOLS */}
@@ -126,7 +125,7 @@ export default function Home() {
         <div className="grid sm:grid-cols-[2fr_1fr] gap-12">
           <div className="space-y-5 text-[17px] leading-relaxed max-w-2xl">
             <p>
-              I specialize in translating complex financial and workforce data into
+              I specialize in translating complex financial and operational data into
               C-suite business cases — ROI models, tax-optimized cost analyses, and
               executive briefs that help Finance, Operations, and HR leaders make the
               case for strategic investments.
